@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Media Keys for Tidal",
+  "version": "0.1",
+  "description": "Media keys extension for Tidal",
+  "author": "mallendeo",
+  "content_scripts": [
+    {
+      "matches": ["*://*/**"],
+      "js": ["emiter.js"]
+    },
+    {
+      "matches": ["*://*.tidalhifi.com/**"],
+      "js": ["tidal-media-keys.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
