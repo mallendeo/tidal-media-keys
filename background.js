@@ -3,8 +3,8 @@ chrome.extension.onMessage.addListener(function(details) {
     url: "*://*.tidalhifi.com/**"
   }, function(result) {
     if (result.length === 1) {
-    var tab = result[0];
-      chrome.tabs.sendMessage(tab.id, details);
+    var tab = result[0]
+      chrome.tabs.sendMessage(tab.id, details)
     }
-  });
-});
+  })
+})
